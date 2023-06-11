@@ -10,7 +10,6 @@ cap = cv2.VideoCapture('los_angeles.mp4')
 
 #Initialise Count
 count = 0
-centerPointCurrentFrame = []
 centerPointPrevFrame = []
 trackingObj = {}
 trackId = 0
@@ -22,6 +21,10 @@ while True:
 
     if not ret: 
         break
+        
+    #Point Current Frame    
+    centerPointCurrentFrame = []
+
 
     #Detect objects on frame 
     (class_ids, scores, boxes) = od.detect(frame)
