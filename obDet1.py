@@ -18,7 +18,7 @@ while True:
     if not ret: 
         break
 
-    #Detect objects on frame 
+    #Detecting objects on frame 
     (class_ids, scores, boxes) = od.detect(frame)
     for box in boxes: 
         (x,y,w,h) = box
