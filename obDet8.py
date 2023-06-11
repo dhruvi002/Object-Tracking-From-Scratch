@@ -61,7 +61,8 @@ while True:
                     if distance < 20: 
                         trackingObj[objectId] = pt  
                         objExists = True
-                        centerPointCurrentFrame.remove(pt)
+                        if pt in centerPointCurrent Frame: 
+                            centerPointCurrentFrame.remove(pt)
                         continue #once we find an association with an ID, we move to the next ID. We dont need to see all the possible associations if we have that already
                 
                 #Removing IDs lost
