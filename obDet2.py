@@ -9,7 +9,6 @@ cap = cv2.VideoCapture('los_angeles.mp4')
 
 #Initialise Count
 count = 0
-centerPoint = []
 
 while True: 
     ret, frame = cap.read()
@@ -26,15 +25,10 @@ while True:
 
         cx = int((x+x+w)/2)
         cy = int((y+y+h)/2)
-        centerPoint.append((cx,cy))
-
+        
         print("FRAME NO", count, ': ', x, y, w, h)
         cv2.rectangle(frame, (x,y), (x+w, y+h), (0, 255, 0), 2)
-        # cv2.circle(frame, (cx,cy), 5, (0,0,255), -1)
-
-    for pt in centerPoint:
-        cv2.circle(frame, pt, 5, (0,0,255), -1)
-
+        cv2.circle(frame, (cx,cy), 5, (0,0,255), -1)
 
     cv2.imshow('Frame', frame)
     key = cv2.waitKey(1)
