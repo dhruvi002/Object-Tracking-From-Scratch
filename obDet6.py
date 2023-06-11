@@ -40,6 +40,7 @@ while True:
     #     cv2.circle(frame, pt, 5, (0,0,255), -1)
     
     #We compare previous and current frame only at the beginning
+    
     if count <= 2 : 
         for pt in centerPointCurrentFrame:
             for pt2 in centerPointPrevFrame:
